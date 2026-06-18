@@ -1,0 +1,66 @@
+version: 2
+
+models:
+  - name: dim_country_details
+    columns:
+      - name: country_id
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_hospital_details
+    columns:
+      - name: hospital_id
+        tests:
+          - unique
+          - not_null
+      - name: country_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_country_details')
+              field: country_id
+
+  - name: dim_measure_details
+    columns:
+      - name: measure_sk
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_survey_details
+    columns:
+      - name: survey_id
+        tests:
+          - unique
+          - not_null
+
+  - name: fact_patient_survey
+    columns:
+      - name: hospital_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_hospital_details')
+              field: hospital_id
+      - name: country_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_country_details')
+              field: country_id
+      - name: measure_sk
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_measure_details')
+              field: measure_sk
+      - name: survey_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_survey_details')
+              field: survey_id
+      - name: survey_response_rate_percent
+        tests:
+          - not_null

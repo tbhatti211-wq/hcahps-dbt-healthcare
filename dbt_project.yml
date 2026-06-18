@@ -20,10 +20,10 @@ models:
   hcahps_healthcare:
     staging:
       +materialized: view
-      +schema: STAGING
+      +schema: STAGING_SILVER
     marts:
       +materialized: table
-      +schema: MARTS
+      +schema: GOLD_MARTS
     reports:
       +materialized: table
       +schema: REPORTS
