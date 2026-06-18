@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_patient_survey
+    description: Reading the raw patient data
+
+sources:
+  - name: HEALTHCARE_SURVEY
+    database: HEALTHCARE_ANALYSIS
+    schema: raw
+    tables:
+      - name: RAW_PATIENT_SURVEY
