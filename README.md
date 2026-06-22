@@ -273,6 +273,10 @@ The source data has no explicit country column. Country is derived from the geog
 LEFT JOIN ensures all 34,999 source rows are preserved even if a dimension join doesn't match. This makes NULL FK values visible and diagnosable rather than silently dropping rows.
 
 ---
+## Tableau Dashboards
+[View on Tableau Public](#) — link coming soon
+
+![Home Dashboard](tableau/Home.png)
 
 ## Author
 
