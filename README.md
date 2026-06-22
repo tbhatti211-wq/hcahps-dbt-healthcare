@@ -278,6 +278,37 @@ LEFT JOIN ensures all 34,999 source rows are preserved even if a dimension join 
 
 ![Home Dashboard](tableau/Home.png)
 
+Built a multi-dashboard Tableau workbook connected directly to the Snowflake star schema (GOLD_MARTS), allowing dynamic aggregations and interactive filtering across all visualizations.
+
+### Dashboard Structure
+
+| Dashboard | Description |
+|---|---|
+| Home | Landing page with navigation to all four dashboards |
+| Hospital Overview | Survey completion and response rates by hospital |
+| Geographic Analysis | County and city level performance across states |
+| Measure Analysis | Response rate distribution and top measures per hospital |
+| Benchmark Analysis | Hospital performance compared to national average |
+
+### Key Visualizations
+
+- Horizontal bar chart: Top N hospitals by completed surveys per state (dynamic parameter)
+- Box and whisker plot: Survey response rate distribution across 50 measures
+- Gradient bar chart: Top N counties by response rate with state drill down
+- Drill down hierarchy: County to city to hospital star rating
+- Diverging bar chart: Hospital variance from national benchmark (red/green)
+- Grouped bar chart: Top measures per hospital by answer percent
+
+### Interactive Features
+
+- Cascading state, city, and hospital dropdowns applied across all dashboards
+- Top N parameters (10, 20, 30, 50) controlling chart depth on every view
+- Cross dashboard navigation via buttons on every page
+- Measure filter on the Measure Analysis dashboard
+
+### Tableau Public
+
+[View Live Dashboard](#) — link coming soon
 ## Author
 
 Talib Hussain
