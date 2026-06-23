@@ -308,7 +308,7 @@ Built a multi-dashboard Tableau workbook connected directly to the Snowflake sta
 
 ### Tableau Public
 
-[View Live Dashboard](#) — link coming soon
+[View Live Dashboard](#) — https://public.tableau.com/authoring/HCAHPSHealthcareSurveyAnalysis/Home#1
 ## Author
 
 Talib Hussain
